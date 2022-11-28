@@ -20,17 +20,36 @@ int main()
 	convertStringToIntVector(n, nVector);
 	convertStringToIntVector(m, mVector);
 
+	//create switch case to choose the method to use
 	switch (whichMethod)
 	{
 	case 1:
+	{
 		Methods::sumOfVectors(nVector, mVector);
 		break;
+	}
 	case 2:
+	{
 		Methods::longSumOfVectors(nVector, mVector);
 		break;
-	default:
+	}
+	case 3:
+	{
+		Methods::multiplyNaiveVectors(nVector, mVector);
 		break;
 	}
+	case 4:
+	{
+		Methods::multiplyVectors(nVector, mVector);
+		break;
+	}
+	default:
+	{
+		cout << "Wrong input";
+		break;
+	}
+	}
+
 
 	return 0;
 
