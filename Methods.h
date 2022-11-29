@@ -16,7 +16,7 @@ public:
 	static vector <int> multiplyKaratsubaVectors(vector<int> i_BinaryNumber, vector<int> i_BinaryNumber2);
 	static vector <int> multiplyVectors(vector<int> i_BinaryNumber, vector<int> i_BinaryNumber2);
 	static vector <int> dynamicProg(vector<int> i_BinaryNumber, vector<int> i_BinaryNumber2);
-	static void divideNaiveVectors(vector<int> i_BinaryNumber, vector<int> i_BinaryNumber2, vector<int> q, vector<int> r);
+	static void divideNaiveVectors(vector<int> i_BinaryNumber, vector<int> i_BinaryNumber2, vector <int> q, vector<int> r);
 	static vector <int> divideBinarySearch(vector<int> i_BinaryNumber, vector<int> i_BinaryNumber2);
 
 };

@@ -3,7 +3,6 @@
 vector<int> Methods::incrementByOne(vector<int> i_BinaryNumber)
 
 {
-
 	int carry = 1;
 	for (int i = i_BinaryNumber.size() - 1; i >= 0; i--)
 	{

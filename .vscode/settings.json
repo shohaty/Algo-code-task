@@ -1,8 +1,0 @@
-{
-  "files.associations": {
-    "*.js": "javascript",
-    "COMMIT_EDITMSG": "git-commit",
-    "vector": "cpp"
-  },
-  "C_Cpp.errorSquiggles": "Disabled"
-}

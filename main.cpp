@@ -42,6 +42,28 @@ int main()
 		Methods::multiplyVectors(nVector, mVector);
 		break;
 	}
+	case 5:
+	{
+		Methods::multiplyKaratsubaVectors(nVector, mVector);
+		break;
+	}
+	case 6:
+	{
+		Methods::dynamicProg(nVector, mVector);
+		break;
+	}
+	case 7:
+	{
+		vector <int> q;
+		vector <int> r;
+		Methods::divideNaiveVectors(nVector, mVector, q, r);
+		break;
+	}
+	case 8:
+	{
+		Methods::divideBinarySearch(nVector, mVector);
+		break;
+	}
 	default:
 	{
 		cout << "Wrong input";
