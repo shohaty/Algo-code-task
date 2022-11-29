@@ -1,7 +1,9 @@
 #include "Methods.h"
-// the funcion gets a binary number and increases it by 1
+// the funcion gets a binary number and increases it by 1 and check at the end if all the digits are 111... add 1 to the beginning of the vector and all the other 0
 vector<int> Methods::incrementByOne(vector<int> i_BinaryNumber)
+
 {
+
 	int carry = 1;
 	for (int i = i_BinaryNumber.size() - 1; i >= 0; i--)
 	{
@@ -15,6 +17,11 @@ vector<int> Methods::incrementByOne(vector<int> i_BinaryNumber)
 			i_BinaryNumber[i] = 1;
 			carry = 0;
 		}
+		
+	}
+	if(carry == 1) // check if correct
+	{
+		i_BinaryNumber.insert(i_BinaryNumber.begin(), 1);
 	}
 	return i_BinaryNumber;
 }
@@ -114,4 +121,41 @@ vector <int> Methods::multiplyVectors(vector<int> n, vector<int> m)
 	}
 	return result;
 }
+//the naive function gets two <int> vectors n,m and return q,r such that n = m*q + r and 0<=r<m
+void Methods::divideNaiveVectors(vector<int> n, vector<int> m, vector<int> q, vector<int> r)
+{
+	//q vector <int> = 1, r vector <int> = 0
+	vector <int> q = vector<int>(1, 1);
+	vector <int> r = vector<int>(1, 0);
+	vector <int> tempM = Methods::multiplyVectors(m,q);
+	vector <int> tempN = vector<int>(1, 0);
+	bool flag = true;
+	
+	while (flag)
+	{
+		while(r!=m)
+		{
+			r = Methods::incrementByOne(r);
+			tempN = Methods::sumOfVectors(tempM, r);
+			if(n==tempN)
+			{
+				break;
+			}
+		}
+		if(n==tempN)
+		{
+			break;
+		}
+		else
+		{
+		r = vector<int>(1, 0);
+		q = Methods::incrementByOne(q);	
+		}
+			
+	} 
+}
+
+
+
+
 

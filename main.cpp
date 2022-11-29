@@ -20,7 +20,6 @@ int main()
 	convertStringToIntVector(n, nVector);
 	convertStringToIntVector(m, mVector);
 
-	//create switch case to choose the method to use
 	switch (whichMethod)
 	{
 	case 1:
@@ -49,7 +48,6 @@ int main()
 		break;
 	}
 	}
-
 
 	return 0;
 
