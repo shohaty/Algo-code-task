@@ -43,6 +43,7 @@ vector<int> Methods::decrementByOne(vector<int> i_BinaryNumber)
 	}
 	return i_BinaryNumber;
 }
+
 vector<int> Methods::sumOfVectors(vector<int> n, vector<int> m)
 {
 	//the function call until m is not 0 to encrement n by m
@@ -87,6 +88,7 @@ vector <int> Methods::longSumOfVectors(vector<int> i_Vec1, vector<int> i_Vec2)
 	}
 	return longSum;
 }
+
 //the function gets two vectors n,m and return n*m by using the sum of vectors function until m is not 0
 vector <int> Methods::multiplyNaiveVectors(vector<int> n, vector<int> m)
 {
@@ -99,6 +101,7 @@ vector <int> Methods::multiplyNaiveVectors(vector<int> n, vector<int> m)
 	}
 	return tempN;
 }
+
 vector <int> Methods::multiplyVectors(vector<int> n, vector<int> m)
 {
 	vector<int> result;
@@ -120,6 +123,18 @@ vector <int> Methods::multiplyVectors(vector<int> n, vector<int> m)
 	}
 	return result;
 }
+
+vector <int> Methods::multiplyKaratsubaVectors(vector<int> n, vector<int> m)
+{
+	return vector<int>();
+}
+
+vector <int> Methods::dynamicProg(vector<int> n, vector<int> m)
+{
+	return vector<int>();
+}
+
+
 //the naive function gets two <int> vectors n,m and return q,r such that n = m*q + r and 0<=r<m
 void Methods::divideNaiveVectors(vector<int> n, vector<int> m, vector<int> q, vector<int> r)
 {
@@ -153,6 +168,14 @@ void Methods::divideNaiveVectors(vector<int> n, vector<int> m, vector<int> q, ve
 			
 	} 
 }
+
+void Methods:: divideBinarySearch (vector<int> n, vector<int> m, vector<int> q, vector<int> r)
+{
+	vector <int> q = vector<int>(1, 1);
+	vector <int> r = vector<int>(1, 0);
+	// continue 	
+}
+
 
 
 
